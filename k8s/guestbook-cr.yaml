@@ -1,0 +1,14 @@
+apiVersion: com.jadecross/v1
+kind: Guestbook
+metadata:
+  name: myguestbook
+spec:
+  image: yu3papa/k8s_guestbook:env
+  size: 1
+  port: 8080
+  db:
+    host: mysql-service
+    port: 3306
+    database: guestbook
+    userid : root
+    password: edu
